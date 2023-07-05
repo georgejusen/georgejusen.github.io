@@ -1,74 +1,55 @@
 function validateForm() {
-  let fullnameInput = document.getElementById("fullname");
-  let emailInput = document.getElementById("email");
-  let optionInput = document.getElementById("option");
+  var fullname = document.getElementById("fullname").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var message = document.getElementById("message").value;
+  var option = document.getElementById("option").value;
 
-  let fullnameValue = fullnameInput.value.trim();
-  let emailValue = emailInput.value.trim();
-  let optionValue = optionInput.value;
-
-  // Validasi field nama lengkap
-  if (fullnameValue === "") {
-    alert("Please enter your name.");
-    fullnameInput.focus();
+  // Validasi Nama (tidak boleh kosong)
+  if (fullname == "") {
+    alert("Nama harus diisi");
     return false;
   }
 
-  // Validasi field email
-  if (emailValue === "") {
-    alert("Please enter your email address.");
-    emailInput.focus();
-    return false;
-  } else if (!isValidEmail(emailValue)) {
-    alert("Please enter a valid email address.");
-    emailInput.focus();
+  // Validasi Email (jika diisi, harus memiliki format yang valid)
+  if (email !== "") {
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Format email tidak valid");
+      return false;
+    }
+  }
+
+  // Validasi Nomor Telepon (jika diisi, harus memiliki format yang valid untuk Indonesia)
+  if (phone !== "") {
+    var phonePattern = /^[0-9]{9,12}$/;
+    if (!phonePattern.test(phone)) {
+      alert("Format nomor telepon tidak valid");
+      return false;
+    }
+  }
+
+  // Validasi Pesan (tidak boleh kosong)
+  if (message == "") {
+    alert("Pesan harus diisi");
     return false;
   }
 
-  // Validasi field pilihan
-  if (optionValue === "") {
-    alert("Please select an option.");
-    optionInput.focus();
+  // Validasi Opsi (harus dipilih)
+  if (option == "") {
+    alert("Silakan pilih opsi");
     return false;
   }
 
-  // Jika semua validasi sukses
+  // Jika semua validasi sukses, form dikirim
   return true;
 }
 
-function isValidEmail(email) {
-  // Regular expression untuk validasi email
-  let emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-  return emailRegex.test(email);
-}
-
+// ----------------------------------------------------------------------------------------
 // Hamburger
 let menuToggle = document.querySelector(".menu-toggle input");
 let nav = document.querySelector("nav ul");
 // Hamburger
-
-document
-  .getElementById("input-form")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Menghentikan pengiriman formulir
-
-    // Mengambil nilai dari elemen-elemen input
-    let nama = document.getElementById("form-nama").value;
-    let tglLahir = document.getElementById("form-tgl-Lahir").value;
-    let jenisKelamin = document.querySelector(
-      'input[name="jenis_kelamin"]:checked'
-    ).value;
-    let pesan = document.getElementById("form-area").value;
-
-    // Mengisi elemen-elemen output dengan nilai yang diambil
-    document.getElementById("timestamp").innerHTML = "Timestamp: " + new Date();
-    document.getElementById("nama").innerHTML = "Nama: " + nama;
-    document.getElementById("tgl-Lahir").innerHTML =
-      "Tanggal Lahir: " + tglLahir;
-    document.getElementById("jenisKelamin").innerHTML =
-      "Jenis Kelamin: " + jenisKelamin;
-    document.getElementById("pesan").innerHTML = "Pesan: " + pesan;
-  });
 
 window.addEventListener("DOMContentLoaded", function () {
   var slideIndex = 0;

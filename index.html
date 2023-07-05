@@ -31,14 +31,7 @@
     </nav>
     <!-- Akhir Dari Navbar -->
 
-
-
-    <!-- Slider -->
-
-    <!-- end slider -->
-
     <!-- Gambar Hero -->
-
     <div class="hero-container">
         <div id="image-slide" class="hero">
             <div class="hero-text">
@@ -48,13 +41,10 @@
         </div>
     </div>
     <!-- akhir gambar hero -->
-
-
     <!-- our headquarter -->
     <div class="our-headquarter">
         <h1>Our Headquarter</h1>
         <div class="profile">
-
             <div class="profile-image">
                 <img src="../assets/headquarters/budi.jpg" alt="">
                 <div class="profile-text">
@@ -75,60 +65,7 @@
             </div>
         </div>
     </div>
-
-    <!-- akhir our headquarter -->
     <hr>
-    <!-- area Message Us -->
-    <section class="message-container">
-        <form id="form-input-container">
-            <table>
-                <tr>
-                    <td>Nama:</td>
-                    <td><input id="form-nama" class="inputform" type="text" name="nama"></td>
-                </tr>
-                <tr>
-                    <td>Tanggal Lahir:</td>
-                    <td><input id="form-tgl-Lahir" class="inputform" type="date" name="tanggal_lahir"></td>
-                </tr>
-                <tr>
-                    <td>Jenis Kelamin:</td>
-                    <td>
-                        <input type="radio" id="pria" name="jenis_kelamin" value="pria">
-                        <label for="pria">Pria</label>
-                        <input type="radio" id="wanita" name="jenis_kelamin" value="wanita">
-                        <label for="wanita">Wanita</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Pesan:</td>
-                    <td><textarea id="form-area" class="inputform" name="pesan"></textarea>
-                    </td>
-                </tr>
-            </table>
-            <input id="input-form" type="submit" value="Submit">
-            <br>
-
-        </form>
-        <div class="output-container">
-            <div class="output-box">
-                <p class="output-message" id="timestamp"></p>
-                <p class="output-message" id="nama"></p>
-                <p class="output-message" id="tgl-Lahir"></p>
-                <p class="output-message" id="jenisKelamin"> </p>
-                <p class="output-message" id="pesan"></p>
-            </div>
-
-        </div>
-
-    </section>
-    <hr>
-
-
-
-    <!-- end area Message Us -->
-
-
-
     <!-- Konten Subtitle -->
     <section class="headlines">
         <h3>Top Rated DJI Drones Shop in Indonesian</h3>
@@ -186,12 +123,21 @@
             </div>
             <form name="form" class="form" onsubmit="return validateForm()">
                 <div>
-                    <label>Your Name:</label>
-                    <input class="input" id="fullname" type="text" placeholder="First and Last Name" required>
+                    <label>Name:</label>
+                    <input class="input" id="fullname" type="text" placeholder="First and Last Name">
                 </div>
                 <div>
-                    <label>Email Address:</label>
+                    <label>Email:</label>
                     <input class="input" id="email" type="email" name="email" placeholder="example@gmail.com">
+                </div>
+                <div>
+                    <label for="phone">Enter your phone number:</label>
+                    <input class="input" type="tel" id="phone" name="phone" placeholder="081234567890">
+                </div>
+                <div>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" class="input" rows="4" cols="50"
+                        placeholder="Type your message here"></textarea>
                 </div>
                 <div>
                     <label for="option">What are you interested in?</label><br>
