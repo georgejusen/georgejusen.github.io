@@ -32,7 +32,7 @@ In this small project I was inspired by a Chinese company headquartered in Shenz
 ## Homepage
 # Workflow Task
 
-Progress: ███████████████░░░░ 70%
+Progress: ███████████████░░ 80%
 
 - [x] Slicing mockup above
 - [Link mockup here](https://app.moqups.com/Y8iumYO1yOg5P2v9YSZ4pW7u8Hs15D2s/view/page/a2d808b02)
@@ -40,7 +40,7 @@ Progress: ███████████████░░░░ 70%
   - Home = Banner Section (Top of Pages Content)
   - Our Package Section (Middle of Pages Content)
   - Call Action Section (Bottom of Pages Content)
-- [ ] Banner use auto slide using JavaScript
+- [x] Banner use auto slide using JavaScript
 - [x] Form Contact Us implements JavaScript Validation
 - [x] Implement Responsive Design on each page (on Desktop and Mobile)
 - [x] Put css files inside of the css/ folder
