@@ -139,7 +139,10 @@ nav ul li {
 
     }
 
+    .our-headquarter h1 {
+        text-align: center;
 
+    }
 
 
 
@@ -147,7 +150,7 @@ nav ul li {
 }
 
 /* Ukuran Mobile */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 577px) {
     .menu-toggle {
         display: flex;
     }
@@ -159,7 +162,7 @@ nav ul li {
         top: 0;
         height: 100vh;
         background-color: #3E3E42;
-        justify-content: space-evenly;
+        justify-content: start;
         align-items: center;
         flex-direction: column;
         z-index: -1;
@@ -222,6 +225,18 @@ nav ul li {
         display: flex;
         justify-content: center;
     }
+
+    .our-headquarter {
+        max-width: 100%;
+        max-height: 100%;
+        /* background-color: aqua; */
+
+    }
+
+    .our-headquarter h1 {
+        text-align: center;
+
+    }
 }
 
 /* Hero Image */
@@ -267,21 +282,23 @@ nav ul li {
 
 
 .our-headquarter {
-    padding: 50px 0px;
+    height: 60%;
     width: 100%;
+    /* background-color: aqua; */
+
 }
 
-.profile-headline {
-    padding: 20px 0px;
+.our-headquarter h1 {
+    padding: 20px 50px
 }
 
-.profile-headline h1 {
-    margin-left: 100px;
-}
 
 .profile {
+    /* background-color: red; */
+    width: 100%;
     display: flex;
-    margin-left: 40px;
+    justify-content: start;
+    align-items: center;
 }
 
 .profile-image {
