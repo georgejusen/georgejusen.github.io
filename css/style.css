@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
     background-color: #252526;
@@ -53,7 +57,10 @@ nav ul {
     display: flex;
     list-style: none;
     width: 25%;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    border: 1px solid white;
+    border-radius: 9px;
+
 
 }
 
@@ -64,11 +71,15 @@ nav ul li a {
 
 nav ul li {
     cursor: pointer;
-    background-color: #007acc;
     padding: 5px;
-    border-radius: 3px;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
+nav ul li:hover {
+    transform: scale(1.2);
+}
+
+/* Akhir dari navbar */
 
 .menu-toggle {
     display: none;
@@ -334,79 +345,8 @@ nav ul li {
 }
 
 
-/* Message Us */
-.message-container {
-    height: 450px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#form-input-container {
-    padding: 50px;
-}
-
-#input-form {
-    width: 100%;
-    height: 35px;
-    color: white;
-    font-weight: bold;
-    background-color: #007acc;
-    border: none;
-    cursor: pointer;
-}
-
-#form-input-container #input-form:hover {
-
-    background-color: #29323D;
-
-}
-
-
-#form-input-container table {
-    margin-top: 50px;
-    color: #252526;
-}
-
-#form-input-container table td {
-    width: 400px;
-    height: 40px;
-    padding: 5px;
-
-}
-
-
-
-
-.inputform {
-    /* width: 250px; */
-    width: 100%;
-    height: 40px;
-    color: black;
-    font-size: large;
-}
-
-.output-container {
-    align-items: center;
-    justify-content: center;
-}
-
-.output-box {
-    margin: 50px;
-    padding: 20px;
-    width: 550px;
-    height: 300px;
-    background-color: white;
-    border-radius: 6px;
-}
-
-.output-message {
-    color: black;
-    font-size: large;
-    margin: 15px auto;
-}
 
 /* mengatur main content */
-/* Gambar */
 .container-satu {
     display: flex;
     width: 960px;
@@ -417,14 +357,16 @@ nav ul li {
     align-items: flex-start;
 }
 
+/* Mengatur Box photo */
 .box-photo img {
     width: 480px;
     border-radius: 5px;
     flex: 1;
 }
 
-/* form */
+/* form contact us*/
 .form-container {
+    flex: 1;
     background-color: #3e3e42;
     border-radius: 4px;
     display: flex;
@@ -440,7 +382,7 @@ nav ul li {
 }
 
 .form-container-text {
-    width: 360px;
+    width: 100%;
     padding-left: 20px;
 }
 
@@ -471,7 +413,7 @@ nav ul li {
 }
 
 .form div .input::placeholder {
-    color: white;
+    color: rgb(146, 144, 139);
 
 }
 
@@ -518,14 +460,16 @@ nav ul li {
 
 }
 
-/* Feature */
 
+
+/* Feature */
 .feature {
+    padding-top: 10px;
     display: flex;
 }
 
 .feature .icon {
-    padding: 15px;
+    padding: 0px 30px 40px;
 }
 
 .circle {
