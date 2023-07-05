@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+    color: white;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #252526;
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* Mengatur navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    background-color: #3E3E42;
+}
+
+nav .logo img {
+    width: 48px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 25%;
+    justify-content: space-around;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li {
+    cursor: pointer;
+    background-color: #007acc;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 25px;
+    justify-content: space-around;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* hamburger menu */
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+/* Hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg);
+    translate: (-0px, 2px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg);
+    translate: (-2px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Responsive Navbar */
+/* Ukuran Tablet */
+@media screen and (max-width: 870px) {
+    nav ul {
+        width: 40%;
+    }
+
+    .our-headquarter {
+        font-size: 8px;
+    }
+
+    .message-container {
+        padding-top: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero {
+        max-height: 30vh;
+    }
+
+    .output-box {
+
+
+        max-width: 80%;
+        max-height: 60%;
+        background-color: white;
+
+
+    }
+
+
+
+
+
+
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        background-color: #3E3E42;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 0.4s;
+    }
+
+
+
+    nav ul li {
+        height: 20%;
+        background-color: #3E3E42;
+        padding: 0px;
+        border-radius: 0px;
+
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+    }
+
+    .hero {
+        max-height: 20vh;
+    }
+
+    .hero-text {
+        font-size: 12px;
+    }
+
+    .profile-headline {
+        max-width: 100%;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile-text {
+        text-align: center;
+    }
+
+    .output-box {
+
+
+        max-width: 80%;
+        max-height: 60%;
+        background-color: white;
+
+    }
+
+    .headlines {
+        max-width: 50%;
+        margin: 50px auto;
+        font-size: 12px;
+    }
+
+    .message-container {
+        max-width: 100%;
+        max-height: 20%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Hero Image */
+.hero-container {
+    padding-top: 50px;
+    width: 100%;
+    margin: auto;
+}
+
+
+.hero {
+    height: 578px;
+    background-size: cover;
+    background-position: 0px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 1.0s ease-in-out;
+    transform: translateX(-100%);
+}
+
+.hero.active {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+.hero-text {
+    padding: 4%;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Mengatur Headlines */
+.headlines {
+    display: flex;
+    width: 800px;
+    margin: 50px auto;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+
+.our-headquarter {
+    padding: 50px 0px;
+    width: 100%;
+}
+
+.profile-headline {
+    padding: 20px 0px;
+}
+
+.profile-headline h1 {
+    margin-left: 100px;
+}
+
+.profile {
+    display: flex;
+    margin-left: 40px;
+}
+
+.profile-image {
+    margin: 50px;
+}
+
+.profile-text {
+    text-align: center;
+}
+
+.our-headquarter .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+
+/* Message Us */
+.message-container {
+    height: 450px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#form-input-container {
+    padding: 50px;
+}
+
+#input-form {
+    width: 100%;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    background-color: #007acc;
+    border: none;
+    cursor: pointer;
+}
+
+#form-input-container #input-form:hover {
+
+    background-color: #29323D;
+
+}
+
+
+#form-input-container table {
+    margin-top: 50px;
+    color: #252526;
+}
+
+#form-input-container table td {
+    width: 400px;
+    height: 40px;
+    padding: 5px;
+
+}
+
+
+
+
+.inputform {
+    /* width: 250px; */
+    width: 100%;
+    height: 40px;
+    color: black;
+    font-size: large;
+}
+
+.output-container {
+    align-items: center;
+    justify-content: center;
+}
+
+.output-box {
+    margin: 50px;
+    padding: 20px;
+    width: 550px;
+    height: 300px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.output-message {
+    color: black;
+    font-size: large;
+    margin: 15px auto;
+}
+
+/* mengatur main content */
+/* Gambar */
+.container-satu {
+    display: flex;
+    width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.box-photo img {
+    width: 480px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+/* form */
+.form-container {
+    background-color: #3e3e42;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 20px;
+    /* color: white; */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form-container-text {
+    width: 360px;
+    padding-left: 20px;
+}
+
+.form div {
+    margin: 10px;
+}
+
+.form div .input {
+    width: 360px;
+    height: 42px;
+    border-radius: 4px;
+    display: flex;
+    border: #252526;
+    color: #252526;
+}
+
+.form div .button {
+    width: 360px;
+    height: 42px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+
+.form div .button:hover {
+    background-color: #29323D;
+}
+
+/* user testimonial */
+.testimoni {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 8px;
+    padding: 35px 0px;
+}
+
+.testimoni img {
+    width: 40px;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.text {
+    font-style: italic;
+}
+
+.information {
+    padding: 20px 0px;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+/* Feature */
+
+.feature {
+    display: flex;
+}
+
+.feature .icon {
+    padding: 15px;
+}
+
+.circle {
+    background: #e3e3e3;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #6e6e6e;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 48px;
+    margin-right: 5px;
+    text-align: center;
+    width: 48px;
+    justify-content: center;
+}
+
+/* Fisrt Feature */
+
+/* Our Package */
+.our-package {
+    margin: 50px auto;
+    width: 960px;
+    display: flex;
+    justify-content: center;
+    background-color: #3e3e42;
+    padding: 20px;
+    color: white;
+}
+
+/* package country */
+.package-country {
+    width: 960px;
+    margin: 50px auto;
+    display: flex;
+}
+
+
+.country {
+    display: flex;
+    justify-content: center;
+    width: 480px;
+    height: 200px;
+}
+
+.country img {
+    margin: 20px;
+    width: 48px;
+}
+
+
+.call-action {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.call-action .headlines {
+    width: 960px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.call-action .headlines button {
+    margin-top: 40px;
+    width: 400px;
+    height: 60px;
+    border-radius: 4px;
+    background-color: #007acc;
+    font-size: 18px;
+    color: white;
+}
