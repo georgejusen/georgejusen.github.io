@@ -30,7 +30,7 @@ In this small project I was inspired by a Chinese company headquartered in Shenz
 
 # Workflow Task
 
-Progress: ███████████████░ 90%
+Progress: █████████████████ 100%
 
 As Software Engineer, you are asked to create a website of the E-Groceries with a designated form to get your stakeholders' personal information and inquiries **(Name, Email, Phone Number, and Message)** by using **JavaScript** validation
 
@@ -47,7 +47,7 @@ As Software Engineer, you are asked to create a website of the E-Groceries with 
 - [x] Put javascript files inside the js/ folder
 - [x] Put all images inside the img/ folder
 - [x] After finish your website, upload Source Code in [GitHub Classroom](https://rebrand.ly/fcse-github) and publish the website in [GitHub Pages](https://pages.github.com/)
-- [ ] Submit URL repository and published website through dedicated Typeform submission that will be shared on Discord and Email
+- [x] Submit URL repository and published website through dedicated Typeform submission that will be shared on Discord and Email
 
 # Tools
 
