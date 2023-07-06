@@ -1,17 +1,3 @@
-## <span style="color:red">⚠️ Peringatan</span>
-
-
-Jika Anda membutuhkan referensi atau ingin mempelajari cara kerja kode ini, disarankan untuk membaca dan memahami kode tersebut, dan kemudian menulis ulang sesuai kebutuhan Anda.
-
-Terima kasih atas pengertian dan kerjasamanya.
-
-## ⚠️ Warning
-
-
-If you need a reference or want to learn how this code works, it is recommended to read and understand the code, and then rewrite it according to your needs.
-
-Thank you for your understanding and cooperation.
-
 # RevoU Mini Project - Fundamental
 
 Hi, my name is George Jusen. I'm one of the participants in the RevoU Fundamental Software Engineering course.
@@ -21,16 +7,10 @@ In this project I created a simple website about **DJI Drones Indonesian** by im
 # Mini Project Description
 
 In this small project I was inspired by a Chinese company headquartered in Shenzhen, Guangdong with factories all over the world. DJI is best known as a manufacturer of unmanned aircraft for aerial videography and photography.
-## Homepage Desktop
-![homepage](https://github.com/revou-fundamental-course/26-jun-23-georgejusen/assets/49087825/22bd141f-49a3-4db8-bff2-4d4fac8eab47)
-
-## Homepage Mobile Responsive
-![mobile](https://github.com/revou-fundamental-course/26-jun-23-georgejusen/assets/49087825/bb4aa3ef-9f0f-4748-8dd1-e2f995761841)
-
 
 # Workflow Task
 
-Progress: █████████████████ 100%
+Progress: ███████████████████ 100% 
 
 As Software Engineer, you are asked to create a website of the E-Groceries with a designated form to get your stakeholders' personal information and inquiries **(Name, Email, Phone Number, and Message)** by using **JavaScript** validation
 

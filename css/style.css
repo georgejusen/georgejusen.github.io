@@ -16,6 +16,54 @@ body {
     background-color: #252526;
 }
 
+/* Modal Pop up */
+/* CSS untuk modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #6e6e6e;
+    margin: 15% auto;
+    padding: 15px;
+    border: 2px solid red;
+    width: 30%;
+    text-align: center;
+    border-radius: 4px;
+
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icon-warning img {
+    width: 48px;
+    height: 48px;
+}
+
 .grid-line {
     width: 30%;
     height: 5px;
@@ -47,6 +95,7 @@ nav {
     width: 100%;
     align-items: center;
     background-color: #3E3E42;
+    z-index: 2;
 }
 
 nav .logo img {
@@ -81,62 +130,6 @@ nav ul li:hover {
 
 /* Akhir dari navbar */
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    height: 25px;
-    justify-content: space-around;
-    position: relative;
-}
-
-.menu-toggle input {
-    position: absolute;
-    width: 40px;
-    height: 28px;
-    left: -6px;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 2;
-}
-
-/* hamburger menu */
-.menu-toggle span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
-    transition: all 0.5s;
-}
-
-
-/* Hamburger menu animation */
-.menu-toggle span:nth-child(2) {
-    transform-origin: 0 0;
-}
-
-.menu-toggle span:nth-child(4) {
-    transform-origin: 0 100%;
-}
-
-.menu-toggle input:checked~span:nth-child(2) {
-    background-color: white;
-    transform: rotate(45deg);
-    translate: (-0px, 2px);
-}
-
-.menu-toggle input:checked~span:nth-child(4) {
-    background-color: white;
-    transform: rotate(-45deg);
-    translate: (-2px, 0);
-}
-
-.menu-toggle input:checked~span:nth-child(3) {
-    opacity: 0;
-    transform: scale(0);
-}
-
-/* Responsive Navbar */
 /* Ukuran Tablet */
 @media screen and (max-width: 870px) {
     nav ul {
@@ -157,16 +150,6 @@ nav ul li:hover {
         max-height: 30vh;
     }
 
-    .output-box {
-
-
-        max-width: 80%;
-        max-height: 60%;
-        background-color: white;
-
-
-    }
-
     .our-headquarter h1 {
         text-align: center;
 
@@ -183,34 +166,36 @@ nav ul li:hover {
         display: flex;
     }
 
+    .our-package {
+        margin: 50px auto;
+        max-width: 100%;
+        color: white;
+    }
 
-    nav ul {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100vh;
-        background-color: #3E3E42;
-        justify-content: start;
-        align-items: center;
+    .container-satu {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .form-container-text {
+        width: 20%;
+        padding-left: 0px;
+    }
+
+
+    .form div .input {
+        max-width: 100%;
+        max-height: 42px;
+
+    }
+
+    .package-country {
+        display: flex;
         flex-direction: column;
-        z-index: -1;
-        transform: translateX(100%);
-        transition: all 0.4s;
     }
 
-
-
-    nav ul li {
-        height: 20%;
-        background-color: #3E3E42;
-        padding: 0px;
-        border-radius: 0px;
-
-    }
-
-    nav ul.slide {
-        transform: translateX(0);
-    }
 
     .hero {
         max-height: 20vh;
@@ -232,20 +217,14 @@ nav ul li:hover {
         text-align: center;
     }
 
-    .output-box {
-
-
-        max-width: 80%;
-        max-height: 60%;
-        background-color: white;
-
-    }
-
     .headlines {
-        max-width: 50%;
+        padding-bottom: 110vh;
+        max-width: 100%;
         margin: 50px auto;
         font-size: 12px;
+        text-align: center;
     }
+
 
     .message-container {
         max-width: 100%;
@@ -257,7 +236,7 @@ nav ul li:hover {
     .our-headquarter {
         max-width: 100%;
         max-height: 100%;
-        /* background-color: aqua; */
+
 
     }
 
@@ -265,13 +244,22 @@ nav ul li:hover {
         text-align: center;
 
     }
+
+    .box-photo {
+        padding-top: 100px;
+
+
+    }
+
 }
 
 /* Hero Image */
+
 .hero-container {
     padding-top: 50px;
     width: 100%;
     margin: auto;
+    position: relative;
 }
 
 
@@ -292,9 +280,14 @@ nav ul li:hover {
 
 
 .hero-text {
-    padding: 4%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
 }
 
 
@@ -322,7 +315,7 @@ nav ul li:hover {
 
 
 .profile {
-    /* background-color: red; */
+
     width: 100%;
     display: flex;
     justify-content: start;
@@ -343,7 +336,6 @@ nav ul li:hover {
     border-radius: 50%;
     background-size: cover;
 }
-
 
 
 /* mengatur main content */

@@ -5,67 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJI Drones Indonesian</title>
-    <link rel="icon" href="../assets/logo/logo-dji.white.png">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="assets/logo/logo-dji.white.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 
 <body>
+    <!-- Modal Pop Up -->
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="icon-warning">
+                <img src="assets/icon/warning.png" alt="">
+            </div>
+            <p id="modalMessage"></p>
+            <div class="close" onclick="closeModal()">&times;</div>
+        </div>
+    </div>
+
     <!-- navbar -->
     <nav>
         <div class="logo">
-            <img src="../assets/logo/logo-dji.white.png" alt="">
+            <img src="assets/logo/logo-dji.white.png" alt="">
         </div>
         <ul>
-            <li><a href="#direct-home"></a>Home</li>
-            <li><a href="#direct-package"></a>Our Package</li>
-            <li><a href="#direct-call"></a>Call Us</li>
+            <li><a href="#direct-home">Home</a></li>
+            <li><a href="#direct-package">Our Package</a></li>
+            <li><a href="#direct-call">Call Us</a></li>
         </ul>
 
-        <div class="menu-toggle">
-            <input type="checkbox">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </nav>
     <!-- Akhir Dari Navbar -->
 
     <!-- Gambar Hero -->
     <div id="direct-home" class="hero-container">
+        <div class="hero-text">
+            <h1>Hi George Jusen, Welcome To Website</h1>
+            <p>Ini Latihan Website Pertama</p>
+        </div>
         <div id="image-slide" class="hero">
-            <div class="hero-text">
-                <h1>Hi George Jusen, Welcome To Website</h1>
-                <p>Ini Latihan Website Pertama</p>
-            </div>
         </div>
     </div>
     <!-- akhir gambar hero -->
+
+
     <!-- our headquarter -->
     <div class="our-headquarter">
         <h1>Our Headquarter</h1>
         <div class="profile">
             <div class="profile-image">
-                <img src="../assets/headquarters/budi.jpg" alt="">
+                <img src="assets/headquarters/budi.jpg" alt="">
                 <div class="profile-text">
                     <h2>Budi</h2>
                 </div>
             </div>
             <div class="profile-image">
-                <img src="../assets/headquarters/rani.jpg" alt="">
+                <img src="assets/headquarters/rani.jpg" alt="">
                 <div class="profile-text">
                     <h2>Rani</h2>
                 </div>
             </div>
             <div class="profile-image">
-                <img src="../assets/headquarters//robi.jpg" alt="">
+                <img src="assets/headquarters//robi.jpg" alt="">
                 <div class="profile-text">
                     <h2>Robi</h2>
                 </div>
             </div>
         </div>
     </div>
-    <div class="grid-line"></div>
+    <div class="grid-line-full"></div>
     <!-- Konten Subtitle -->
     <section class="headlines">
         <h3>Top Rated DJI Drones Shop in Indonesian</h3>
@@ -76,26 +84,25 @@
     <!-- Flex Kolom -->
     <main class="container-satu">
         <section class="box-photo">
-            <img src="../assets/Drones-optimized.jpg" alt="Illustrasi belanja">
+            <img src="assets/second-banner/Drones-optimized.jpg" alt="Illustrasi belanja">
             <p class="text">"Pembelian Drone disini sangat terpercaya dan barangnya berkualitas"</p>
             <section class="testimoni">
                 <p>
-                    <img src="../assets/user.png" alt="">
+                    <img src="assets/icon/user.png" alt="">
                 <p>George Jusen <br>
                     Film Maker , 23</p>
             </section>
             <section class="information">
-                <h5>Use this space to provide users with more information about your offer. Consider it a follow-up
-                    to
-                    your headline and
-                    explain the benefits of your service or product</h5>
+                <h5>If you buy on our website, you will get many features that we have provided the best for you
+                    professional filmmaker
+                    lovers because we are the number one brand of the best drones in Indonesia.</h5>
             </section>
             <section class="feature">
                 <div class="icon">
                     <div class="circle">1</div>
                 </div>
 
-                <p>Your first feature, written in the form of a benefit statement.</p>
+                <p>buying a Matrice series drone gets a bundling package with complete accessories</p>
 
             </section>
             <section class="feature">
@@ -103,7 +110,7 @@
                     <div class="circle">2</div>
                 </div>
 
-                <p>Your first feature, written in the form of a benefit statement.</p>
+                <p>Purchases of Mavic series drones receive a warranty of up to 1 year.</p>
 
             </section>
             <section class="feature">
@@ -142,10 +149,10 @@
                     <label for="option">What are you interested in?</label><br>
                     <select id="option" class="input" name="interested">
                         <option value="" disabled selected>Select option</option>
-                        <option value="bali">Bali</option>
-                        <option value="japan">Japan</option>
-                        <option value="german">German</option>
-                        <option value="indonesian">Indonesian</option>
+                        <option value="video-production">Video Production</option>
+                        <option value="enterprise">Enterprise</option>
+                        <option value="agriculture">Agriculture</option>
+                        <option value="dji-military">DJI Military</option>
                     </select>
                 </div>
                 <div>
@@ -164,32 +171,33 @@
     <main class="package-country">
         <div class="country">
             <div class="logo-country">
-                <img src="../assets/idea.png" alt="">
+                <img src="assets/icon/drone.png" alt="">
             </div>
             <div class="content-package">
                 <h2>Video Production</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, necessitatibus.</p>
+                <p>Professional Aerial and Ground Filmmaking Tools</p>
             </div>
         </div>
 
         <div class="country">
             <div class="logo-country">
-                <img src="../assets/idea.png" alt="">
+                <img src="assets/icon/drone 2.png" alt="">
             </div>
             <div class="content-package">
                 <h2>Enterprise</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, necessitatibus.</p>
+                <p>Designed to cater to the specific needs of businesses, the Drone Mavic-Series offers a range of
+                    enterprise features.</p>
             </div>
         </div>
 
         </div>
         <div class="country">
             <div class="logo-country">
-                <img src="../assets/idea.png" alt="">
+                <img src="assets/icon/drone 5.png" alt="">
             </div>
             <div class="content-package">
                 <h2>Agriculture</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, necessitatibus.</p>
+                <p>The ProDrone X-Series comes equipped with specialized features for agricultural applications. </p>
             </div>
         </div>
     </main>
@@ -197,30 +205,29 @@
     <main class="package-country">
         <div class="country">
             <div class="logo-country">
-                <img src="../assets/star.png" alt="">
+                <img src="assets/icon/drone 3.png" alt="">
             </div>
             <div class="content-package">
-                <h2>Bandung</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, necessitatibus.</p>
+                <h2>DJI Matrice</h2>
+                <p>DJI's latest commercial drone platform that takes inspiration from modern aviation systems.</p>
             </div>
         </div>
 
         <div class="country">
 
             <div class="logo-country">
-                <img src="../assets/star.png" alt="">
+                <img src="assets/icon/drone 4.png" alt="">
             </div>
             <div class="content-package">
                 <h2>Osmo Mobile</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe repudiandae nesciunt sed sapiente, ut
-                    harum.</p>
+                <p>Osmo Mobile is an intelligent smartphone stabilizer packed with creative features.</p>
             </div>
         </div>
 
         </div>
         <div class="country">
             <div class="logo-country">
-                <img src="../assets/star.png" alt="">
+                <img src="assets/icon/drone 6.png" alt="">
             </div>
             <div class="content-package">
                 <h2>DJI Mini 3 Pro</h2>
@@ -242,8 +249,7 @@
         </div>
     </main>
     <hr>
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
-
 
 </html>
